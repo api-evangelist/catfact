@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "@vocab": "https://catfact.ninja/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Fact": "schema:Thing",
+    "Breed": "schema:Thing",
+
+    "fact": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "length": {
+      "@id": "https://catfact.ninja/vocab#length",
+      "@type": "xsd:integer"
+    },
+    "breed": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "schema:countryOfOrigin",
+      "@type": "xsd:string"
+    },
+    "origin": {
+      "@id": "https://catfact.ninja/vocab#origin",
+      "@type": "xsd:string"
+    },
+    "coat": {
+      "@id": "https://catfact.ninja/vocab#coat",
+      "@type": "xsd:string"
+    },
+    "pattern": {
+      "@id": "https://catfact.ninja/vocab#pattern",
+      "@type": "xsd:string"
+    },
+    "current_page": {
+      "@id": "https://catfact.ninja/vocab#currentPage",
+      "@type": "xsd:integer"
+    },
+    "per_page": {
+      "@id": "https://catfact.ninja/vocab#perPage",
+      "@type": "xsd:integer"
+    },
+    "total": {
+      "@id": "https://catfact.ninja/vocab#total",
+      "@type": "xsd:integer"
+    },
+    "last_page": {
+      "@id": "https://catfact.ninja/vocab#lastPage",
+      "@type": "xsd:integer"
+    },
+    "from": {
+      "@id": "https://catfact.ninja/vocab#from",
+      "@type": "xsd:integer"
+    },
+    "to": {
+      "@id": "https://catfact.ninja/vocab#to",
+      "@type": "xsd:integer"
+    },
+    "data": {
+      "@id": "https://catfact.ninja/vocab#data",
+      "@container": "@list"
+    },
+    "first_page_url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "last_page_url": {
+      "@id": "https://catfact.ninja/vocab#lastPageUrl",
+      "@type": "@id"
+    },
+    "next_page_url": {
+      "@id": "schema:nextItem",
+      "@type": "@id"
+    },
+    "prev_page_url": {
+      "@id": "schema:previousItem",
+      "@type": "@id"
+    },
+    "path": {
+      "@id": "schema:url",
+      "@type": "@id"
+    }
+  }
+}

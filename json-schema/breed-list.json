@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://catfact.ninja/schema/breed-list",
+  "title": "BreedList",
+  "description": "Paginated list of cat breeds using Laravel-style pagination.",
+  "type": "object",
+  "properties": {
+    "current_page": {
+      "type": "integer",
+      "description": "Current page number.",
+      "minimum": 1,
+      "example": 1
+    },
+    "data": {
+      "type": "array",
+      "description": "Array of cat breeds on this page.",
+      "items": {
+        "$ref": "breed.json"
+      }
+    },
+    "first_page_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the first page."
+    },
+    "from": {
+      "type": "integer",
+      "description": "First item number in current page.",
+      "example": 1
+    },
+    "last_page": {
+      "type": "integer",
+      "description": "Last page number.",
+      "example": 49
+    },
+    "last_page_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the last page."
+    },
+    "next_page_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL of the next page, or null if on last page."
+    },
+    "path": {
+      "type": "string",
+      "format": "uri",
+      "description": "Base path for this resource."
+    },
+    "per_page": {
+      "type": "integer",
+      "description": "Number of items per page.",
+      "example": 10
+    },
+    "prev_page_url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL of the previous page, or null if on first page."
+    },
+    "to": {
+      "type": "integer",
+      "description": "Last item number in current page.",
+      "example": 10
+    },
+    "total": {
+      "type": "integer",
+      "description": "Total number of breeds.",
+      "example": 487
+    }
+  }
+}

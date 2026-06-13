@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://catfact.ninja/schema/breed",
+  "title": "Breed",
+  "description": "Information about a cat breed.",
+  "type": "object",
+  "required": ["breed"],
+  "properties": {
+    "breed": {
+      "type": "string",
+      "description": "Name of the cat breed.",
+      "example": "Abyssinian"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country of origin.",
+      "example": "Ethiopia"
+    },
+    "origin": {
+      "type": "string",
+      "description": "Origin type (e.g. Natural/Standard, Mutation, Hybrid).",
+      "example": "Natural/Standard"
+    },
+    "coat": {
+      "type": "string",
+      "description": "Coat length description.",
+      "example": "Short"
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Coat pattern description.",
+      "example": "Ticked"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,84 @@
+vocabulary:
+  - term: fact
+    definition: >-
+      A single piece of trivia or information about cats, returned as a string
+      with its character count. Facts are sourced from cat-related literature
+      and community submissions.
+    type: string
+    example: "In multi-cat households, cats of the opposite sex usually get along better."
+
+  - term: length
+    definition: >-
+      The number of characters in a fact string. Used with the max_length
+      query parameter to filter facts by their character count.
+    type: integer
+    example: 75
+
+  - term: breed
+    definition: >-
+      The name of a domestic cat breed recognized by cat fancier associations.
+    type: string
+    example: "Abyssinian"
+
+  - term: country
+    definition: >-
+      The country of origin associated with a particular cat breed, indicating
+      the geographic region where the breed was first developed or recognized.
+    type: string
+    example: "Ethiopia"
+
+  - term: origin
+    definition: >-
+      How a breed came to exist. Common values include Natural/Standard (arose
+      naturally in a population), Mutation (developed from a spontaneous genetic
+      mutation), and Hybrid (created by crossing two existing breeds).
+    type: string
+    example: "Natural/Standard"
+
+  - term: coat
+    definition: >-
+      The length descriptor for a cat breed's fur. Typical values include Short,
+      Medium, Long, Semi-long, and Hairless.
+    type: string
+    example: "Short"
+
+  - term: pattern
+    definition: >-
+      The color and marking pattern of a cat breed's coat. Examples include
+      Ticked, Tabby, Solid, Bi- or tri-colored, Colorpoint, and All (any pattern).
+    type: string
+    example: "Ticked"
+
+  - term: current_page
+    definition: >-
+      The page number of the currently returned result set, starting at 1.
+      Part of the Laravel-style pagination envelope used by /facts and /breeds.
+    type: integer
+    example: 1
+
+  - term: per_page
+    definition: >-
+      The number of items returned per page. Controlled by the limit query
+      parameter on /facts and /breeds endpoints.
+    type: integer
+    example: 10
+
+  - term: total
+    definition: >-
+      The total count of items available across all pages for the given query.
+    type: integer
+    example: 1656
+
+  - term: max_length
+    definition: >-
+      Query parameter accepted by /fact and /facts. Restricts returned facts
+      to those whose character length does not exceed the specified integer value.
+    type: integer
+    example: 100
+
+  - term: limit
+    definition: >-
+      Query parameter accepted by /facts and /breeds. Sets the number of items
+      to return per page. Defaults to 10; maximum is 1000.
+    type: integer
+    example: 10

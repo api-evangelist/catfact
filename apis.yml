@@ -34,7 +34,8 @@ apis:
       - type: Documentation
         url: https://catfact.ninja/
       - type: OpenAPI
-        url: https://catfact.ninja/docs
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/catfact/refs/heads/main/openapi/openapi.yml
 common:
   - type: Website
     url: https://catfact.ninja/

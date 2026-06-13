@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://catfact.ninja/schema/fact",
+  "title": "Fact",
+  "description": "A single cat fact with its character length.",
+  "type": "object",
+  "required": ["fact", "length"],
+  "properties": {
+    "fact": {
+      "type": "string",
+      "description": "The cat fact text.",
+      "example": "In multi-cat households, cats of the opposite sex usually get along better."
+    },
+    "length": {
+      "type": "integer",
+      "description": "Character length of the fact.",
+      "minimum": 1,
+      "example": 75
+    }
+  },
+  "additionalProperties": false
+}
