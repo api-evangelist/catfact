@@ -1,0 +1,23 @@
+name: Cat Facts API Plans and Pricing
+description: >-
+  The Cat Facts API is entirely free and open to the public. There are no paid
+  tiers, subscription fees, or premium plans. Developers can use the API without
+  registration or payment of any kind.
+url: https://catfact.ninja/
+plans:
+  - name: Free
+    description: >-
+      Unlimited public access to all Cat Facts API endpoints. No API key,
+      registration, or payment required. CORS is enabled for browser-based
+      applications.
+    price: 0
+    currency: USD
+    billing: none
+    features:
+      - Random cat fact endpoint (GET /fact)
+      - Paginated cat facts list (GET /facts)
+      - Cat breeds list (GET /breeds)
+      - JSON responses
+      - CORS enabled
+      - No authentication required
+      - No registration required

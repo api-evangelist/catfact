@@ -1,0 +1,21 @@
+name: Cat Facts API Rate Limits
+description: >-
+  The Cat Facts API does not publish explicit rate-limit policies. It is an
+  open, free API with no authentication, so no per-key quotas are enforced.
+  Practical limits may exist at the infrastructure level but are not documented.
+  Consumer best practice is to avoid abusive request volumes and to cache
+  responses where possible.
+url: https://catfact.ninja/
+rateLimits:
+  - name: Default (Undocumented)
+    description: >-
+      No formally documented rate limit. The API is publicly accessible with
+      CORS enabled. Developers should implement client-side caching and avoid
+      high-frequency polling to remain a good citizen of the shared service.
+    requests: null
+    period: null
+    scope: global
+    notes: >-
+      No rate-limit headers (X-RateLimit-*) are documented. If the service
+      returns HTTP 429, implement exponential back-off. Observed response times
+      range from 220 ms to 489 ms.

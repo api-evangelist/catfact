@@ -1,0 +1,53 @@
+aid: catfact
+name: Cat Facts API
+description: >-
+  Free REST API providing random cat facts, breed information, and cat-related
+  trivia for developers building fun applications and learning APIs. No
+  authentication required; CORS enabled for frontend use. Endpoints return
+  paginated JSON data with configurable limits and max-length filters.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/catfact/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Cat Facts
+  - Trivia
+  - Fun
+  - Learning
+  - Free
+apis:
+  - aid: catfact:cat-facts-api
+    name: Cat Facts API
+    description: >-
+      REST API with three endpoints — GET /fact returns a single random cat
+      fact, GET /facts returns a paginated list of cat facts, and GET /breeds
+      returns a list of cat breeds. No API key required; fully open and free.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://catfact.ninja/
+    baseURL: https://catfact.ninja
+    tags:
+      - Cat Facts
+      - Breeds
+      - Trivia
+    properties:
+      - type: Documentation
+        url: https://catfact.ninja/
+      - type: OpenAPI
+        url: https://catfact.ninja/docs
+common:
+  - type: Website
+    url: https://catfact.ninja/
+  - type: Documentation
+    url: https://catfact.ninja/
+  - type: GitHubOrg
+    url: https://github.com/alexwohlbruck/cat-facts
+  - type: Plans
+    url: plans/catfact-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/catfact-rate-limits.yml
+  - type: FinOps
+    url: finops/catfact-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

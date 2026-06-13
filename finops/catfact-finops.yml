@@ -1,0 +1,31 @@
+name: Cat Facts API FinOps
+description: >-
+  The Cat Facts API is free with no costs to consumers. There are no metered
+  charges, data egress fees, or subscription costs. FinOps considerations are
+  limited to indirect costs such as developer time and any infrastructure
+  required to cache or proxy the API on the consumer side.
+url: https://catfact.ninja/
+cost:
+  direct:
+    apiCalls: 0
+    currency: USD
+    notes: All endpoints are free and unlimited for public use.
+  indirect:
+    - type: Developer Time
+      description: >-
+        Engineering effort to integrate and maintain the API client in consumer
+        applications.
+    - type: Caching Infrastructure
+      description: >-
+        Optional: consumer-side cache (e.g., Redis, in-memory) to reduce
+        unnecessary outbound calls and improve response latency.
+optimization:
+  - recommendation: Cache responses client-side
+    rationale: >-
+      Cat facts and breed data are relatively static. Caching GET /fact and
+      GET /breeds responses for minutes to hours reduces network calls with no
+      cost impact on the provider.
+  - recommendation: Batch with GET /facts
+    rationale: >-
+      Use GET /facts with a higher limit parameter to retrieve multiple facts in
+      a single request rather than calling GET /fact repeatedly.
