@@ -5,7 +5,7 @@ description: >-
   trivia for developers building fun applications and learning APIs. No
   authentication required; CORS enabled for frontend use. Endpoints return
   paginated JSON data with configurable limits and max-length filters.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/catfact/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -23,7 +23,7 @@ apis:
       REST API with three endpoints — GET /fact returns a single random cat
       fact, GET /facts returns a paginated list of cat facts, and GET /breeds
       returns a list of cat breeds. No API key required; fully open and free.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://catfact.ninja/
     baseURL: https://catfact.ninja
     tags:
