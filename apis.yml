@@ -37,6 +37,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/catfact/refs/heads/main/openapi/openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/catfact-agentic-access.yml
   - type: DomainSecurity
     url: security/catfact-domain-security.yml
   - type: Website
