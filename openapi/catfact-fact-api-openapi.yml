@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: Cat Facts Breeds Fact API
+  description: Free REST API providing random cat facts, breed information, and cat-related trivia for developers building fun applications and learning APIs. No authentication required; CORS enabled for frontend use. Endpoints return paginated JSON data with configurable limits and max-length filters.
+  version: 1.0.0
+  contact:
+    url: https://catfact.ninja/
+  license:
+    name: MIT
+    url: https://github.com/alexwohlbruck/cat-facts/blob/master/LICENSE
+servers:
+- url: https://catfact.ninja
+  description: Production server
+tags:
+- name: Fact
+paths:
+  /fact:
+    get:
+      operationId: getRandomFact
+      summary: Get a random cat fact
+      description: Returns a single random cat fact.
+      parameters:
+      - name: max_length
+        in: query
+        required: false
+        description: Maximum length of returned fact in characters.
+        schema:
+          type: integer
+          minimum: 1
+      responses:
+        '200':
+          description: A single cat fact
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Fact'
+              example:
+                fact: In multi-cat households, cats of the opposite sex usually get along better.
+                length: 75
+        '404':
+          description: No fact found matching criteria
+      tags:
+      - Fact
+components:
+  schemas:
+    Fact:
+      type: object
+      description: A single cat fact with its character length.
+      required:
+      - fact
+      - length
+      properties:
+        fact:
+          type: string
+          description: The cat fact text.
+          example: In multi-cat households, cats of the opposite sex usually get along better.
+        length:
+          type: integer
+          description: Character length of the fact.
+          example: 75
