@@ -5,7 +5,19 @@ description: >-
   trivia for developers building fun applications and learning APIs. No
   authentication required; CORS enabled for frontend use. Endpoints return
   paginated JSON data with configurable limits and max-length filters.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: open
+  trial: false
+  try_now: true
+  public: true
+  label: Free · Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/catfact.png
 url: https://raw.githubusercontent.com/api-evangelist/catfact/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -17,25 +29,42 @@ tags:
   - Learning
   - Free
 apis:
-  - aid: catfact:cat-facts-api
-    name: Cat Facts API
-    description: >-
-      REST API with three endpoints — GET /fact returns a single random cat
-      fact, GET /facts returns a paginated list of cat facts, and GET /breeds
-      returns a list of cat breeds. No API key required; fully open and free.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://catfact.ninja/
-    baseURL: https://catfact.ninja
-    tags:
-      - Cat Facts
-      - Breeds
-      - Trivia
-    properties:
-      - type: Documentation
-        url: https://catfact.ninja/
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/catfact/refs/heads/main/openapi/openapi.yml
+- aid: catfact:catfact-breeds-api
+  name: Cat Facts API Breeds API
+  description: The Breeds API from Cat Facts API — 1 operation(s) for breeds.
+  humanURL: https://catfact.ninja/
+  baseURL: https://catfact.ninja
+  tags:
+  - Breeds
+  properties:
+  - type: OpenAPI
+    url: openapi/catfact-breeds-api-openapi.yml
+  - type: Documentation
+    url: https://catfact.ninja/
+- aid: catfact:catfact-fact-api
+  name: Cat Facts API Fact API
+  description: The Fact API from Cat Facts API — 1 operation(s) for fact.
+  humanURL: https://catfact.ninja/
+  baseURL: https://catfact.ninja
+  tags:
+  - Fact
+  properties:
+  - type: OpenAPI
+    url: openapi/catfact-fact-api-openapi.yml
+  - type: Documentation
+    url: https://catfact.ninja/
+- aid: catfact:catfact-facts-api
+  name: Cat Facts API Facts API
+  description: The Facts API from Cat Facts API — 1 operation(s) for facts.
+  humanURL: https://catfact.ninja/
+  baseURL: https://catfact.ninja
+  tags:
+  - Facts
+  properties:
+  - type: OpenAPI
+    url: openapi/catfact-facts-api-openapi.yml
+  - type: Documentation
+    url: https://catfact.ninja/
 common:
   - type: AgenticAccess
     url: agentic-access/catfact-agentic-access.yml
