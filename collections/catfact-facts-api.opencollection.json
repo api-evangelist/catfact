@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cat Breeds Facts API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Facts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a paginated list of cat facts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catfact.ninja/facts",
+            "params": [
+              {
+                "name": "max_length",
+                "value": "",
+                "type": "query",
+                "description": "Maximum length of returned facts in characters."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of facts to return per page."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination."
+              }
+            ]
+          },
+          "docs": "Returns a paginated list of cat facts."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

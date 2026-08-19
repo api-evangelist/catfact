@@ -1,0 +1,134 @@
+{
+  "item": [
+    {
+      "id": "8b42371d-efcd-478a-891d-7f125d951023",
+      "name": "Facts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "001507a5-5d57-43dc-83e7-8eb762b3984c",
+          "name": "Get a paginated list of cat facts",
+          "request": {
+            "name": "Get a paginated list of cat facts",
+            "description": {
+              "content": "Returns a paginated list of cat facts.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "facts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "max_length",
+                  "value": "<integer>",
+                  "description": "Maximum length of returned facts in characters."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10",
+                  "description": "Number of facts to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6623ef54-4813-4e48-926f-6b27bd196d94",
+              "name": "Paginated list of cat facts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "facts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "max_length",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"current_page\": 1,\n  \"data\": [\n    {\n      \"fact\": \"Unlike dogs, cats do not have a sweet tooth. Scientists believe this is due to a mutation in a key taste receptor.\",\n      \"length\": 114\n    },\n    {\n      \"fact\": \"When a cat chases its prey, it keeps its head level. Dogs and humans bob their heads up and down.\",\n      \"length\": 97\n    }\n  ],\n  \"first_page_url\": \"https://catfact.ninja/facts?page=1\",\n  \"from\": 1,\n  \"last_page\": 166,\n  \"last_page_url\": \"https://catfact.ninja/facts?page=166\",\n  \"next_page_url\": \"https://catfact.ninja/facts?page=2\",\n  \"path\": \"https://catfact.ninja/facts\",\n  \"per_page\": 10,\n  \"prev_page_url\": null,\n  \"to\": 10,\n  \"total\": 1656\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://catfact.ninja",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f7c7d420-4526-4a13-86de-e50feae02403",
+    "name": "Cat Breeds Facts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Free REST API providing random cat facts, breed information, and cat-related trivia for developers building fun applications and learning APIs. No authentication required; CORS enabled for frontend use. Endpoints return paginated JSON data with configurable limits and max-length filters.",
+      "type": "text/plain"
+    }
+  }
+}

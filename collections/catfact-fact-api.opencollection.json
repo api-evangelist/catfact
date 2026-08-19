@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cat Facts Breeds Fact API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fact",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a random cat fact",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://catfact.ninja/fact",
+            "params": [
+              {
+                "name": "max_length",
+                "value": "",
+                "type": "query",
+                "description": "Maximum length of returned fact in characters."
+              }
+            ]
+          },
+          "docs": "Returns a single random cat fact."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

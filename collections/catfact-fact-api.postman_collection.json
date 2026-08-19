@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "e6bef8ec-3cd7-4fde-96cf-bed310ac8166",
+      "name": "Fact",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "11827218-4108-4712-ac09-eafc3ab05d89",
+          "name": "Get a random cat fact",
+          "request": {
+            "name": "Get a random cat fact",
+            "description": {
+              "content": "Returns a single random cat fact.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "fact"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "max_length",
+                  "value": "<integer>",
+                  "description": "Maximum length of returned fact in characters."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c45219e5-ba58-4ec0-a485-f61ab16218fc",
+              "name": "A single cat fact",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fact"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "max_length",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"fact\": \"In multi-cat households, cats of the opposite sex usually get along better.\",\n  \"length\": 75\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4693e9da-438f-4be9-82e0-d53ffa8bd959",
+              "name": "No fact found matching criteria",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fact"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "max_length",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://catfact.ninja",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cffd9461-8f02-4c9b-92a0-9af6c41f343c",
+    "name": "Cat Facts Breeds Fact API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Free REST API providing random cat facts, breed information, and cat-related trivia for developers building fun applications and learning APIs. No authentication required; CORS enabled for frontend use. Endpoints return paginated JSON data with configurable limits and max-length filters.",
+      "type": "text/plain"
+    }
+  }
+}
