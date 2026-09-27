@@ -72,21 +72,6 @@ paths:
       - Facts
 components:
   schemas:
-    PaginationLink:
-      type: object
-      description: A single pagination link entry.
-      properties:
-        url:
-          type: string
-          format: uri
-          nullable: true
-          description: URL for this page link.
-        label:
-          type: string
-          description: Display label for this link (e.g. page number or Previous/Next).
-        active:
-          type: boolean
-          description: Whether this link represents the current page.
     Fact:
       type: object
       description: A single cat fact with its character length.
@@ -162,3 +147,18 @@ components:
           type: integer
           description: Total number of facts.
           example: 1656
+    PaginationLink:
+      type: object
+      description: A single pagination link entry.
+      properties:
+        url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL for this page link.
+        label:
+          type: string
+          description: Display label for this link (e.g. page number or Previous/Next).
+        active:
+          type: boolean
+          description: Whether this link represents the current page.

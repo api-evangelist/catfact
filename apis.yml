@@ -48,7 +48,6 @@ apis:
   name: Cat Facts API Breeds API
   description: The Breeds API from Cat Facts API — 1 operation(s) for breeds.
   humanURL: https://catfact.ninja/
-  baseURL: https://catfact.ninja
   tags:
   - Breeds
   properties:
@@ -60,7 +59,6 @@ apis:
   name: Cat Facts API Fact API
   description: The Fact API from Cat Facts API — 1 operation(s) for fact.
   humanURL: https://catfact.ninja/
-  baseURL: https://catfact.ninja
   tags:
   - Fact
   properties:
@@ -72,7 +70,6 @@ apis:
   name: Cat Facts API Facts API
   description: The Facts API from Cat Facts API — 1 operation(s) for facts.
   humanURL: https://catfact.ninja/
-  baseURL: https://catfact.ninja
   tags:
   - Facts
   properties:

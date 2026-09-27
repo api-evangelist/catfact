@@ -71,21 +71,32 @@ paths:
       - Breeds
 components:
   schemas:
-    PaginationLink:
+    Breed:
       type: object
-      description: A single pagination link entry.
+      description: Information about a cat breed.
+      required:
+      - breed
       properties:
-        url:
+        breed:
           type: string
-          format: uri
-          nullable: true
-          description: URL for this page link.
-        label:
+          description: Name of the cat breed.
+          example: Abyssinian
+        country:
           type: string
-          description: Display label for this link (e.g. page number or Previous/Next).
-        active:
-          type: boolean
-          description: Whether this link represents the current page.
+          description: Country of origin.
+          example: Ethiopia
+        origin:
+          type: string
+          description: Origin type (e.g. Natural/Standard, Mutation, Hybrid).
+          example: Natural/Standard
+        coat:
+          type: string
+          description: Coat length description.
+          example: Short
+        pattern:
+          type: string
+          description: Coat pattern description.
+          example: Ticked
     BreedList:
       type: object
       description: Paginated list of cat breeds (Laravel-style pagination).
@@ -146,29 +157,18 @@ components:
           type: integer
           description: Total number of breeds.
           example: 487
-    Breed:
+    PaginationLink:
       type: object
-      description: Information about a cat breed.
-      required:
-      - breed
+      description: A single pagination link entry.
       properties:
-        breed:
+        url:
           type: string
-          description: Name of the cat breed.
-          example: Abyssinian
-        country:
+          format: uri
+          nullable: true
+          description: URL for this page link.
+        label:
           type: string
-          description: Country of origin.
-          example: Ethiopia
-        origin:
-          type: string
-          description: Origin type (e.g. Natural/Standard, Mutation, Hybrid).
-          example: Natural/Standard
-        coat:
-          type: string
-          description: Coat length description.
-          example: Short
-        pattern:
-          type: string
-          description: Coat pattern description.
-          example: Ticked
+          description: Display label for this link (e.g. page number or Previous/Next).
+        active:
+          type: boolean
+          description: Whether this link represents the current page.
