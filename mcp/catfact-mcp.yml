@@ -16,10 +16,13 @@ deployment:
 tools_count: 3
 tools:
 - name: random-cat-fact
-  description: ''
+  description: Get a single random cat fact, optionally limited to a maximum character length.
 - name: list-cat-facts
-  description: ''
+  description: List cat facts as a JSON array, optionally filtered by maximum length. Default limit 10,
+    maximum 1000.
 - name: list-breeds
-  description: ''
+  description: List cat breeds as a JSON array. Default limit 25, maximum 1000.
 tools_source: live tools/list via initialize handshake, 2026-09-11 (signals/audit_mcp_authorship.py --probe)
 authorship: provider
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
