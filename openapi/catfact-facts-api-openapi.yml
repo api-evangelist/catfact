@@ -87,6 +87,21 @@ components:
           type: integer
           description: Character length of the fact.
           example: 75
+    PaginationLink:
+      type: object
+      description: A single pagination link entry.
+      properties:
+        url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL for this page link.
+        label:
+          type: string
+          description: Display label for this link (e.g. page number or Previous/Next).
+        active:
+          type: boolean
+          description: Whether this link represents the current page.
     FactList:
       type: object
       description: Paginated list of cat facts (Laravel-style pagination).
@@ -147,18 +162,3 @@ components:
           type: integer
           description: Total number of facts.
           example: 1656
-    PaginationLink:
-      type: object
-      description: A single pagination link entry.
-      properties:
-        url:
-          type: string
-          format: uri
-          nullable: true
-          description: URL for this page link.
-        label:
-          type: string
-          description: Display label for this link (e.g. page number or Previous/Next).
-        active:
-          type: boolean
-          description: Whether this link represents the current page.

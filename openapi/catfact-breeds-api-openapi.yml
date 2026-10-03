@@ -97,6 +97,21 @@ components:
           type: string
           description: Coat pattern description.
           example: Ticked
+    PaginationLink:
+      type: object
+      description: A single pagination link entry.
+      properties:
+        url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL for this page link.
+        label:
+          type: string
+          description: Display label for this link (e.g. page number or Previous/Next).
+        active:
+          type: boolean
+          description: Whether this link represents the current page.
     BreedList:
       type: object
       description: Paginated list of cat breeds (Laravel-style pagination).
@@ -157,18 +172,3 @@ components:
           type: integer
           description: Total number of breeds.
           example: 487
-    PaginationLink:
-      type: object
-      description: A single pagination link entry.
-      properties:
-        url:
-          type: string
-          format: uri
-          nullable: true
-          description: URL for this page link.
-        label:
-          type: string
-          description: Display label for this link (e.g. page number or Previous/Next).
-        active:
-          type: boolean
-          description: Whether this link represents the current page.
