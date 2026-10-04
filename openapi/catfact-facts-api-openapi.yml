@@ -72,21 +72,6 @@ paths:
       - Facts
 components:
   schemas:
-    Fact:
-      type: object
-      description: A single cat fact with its character length.
-      required:
-      - fact
-      - length
-      properties:
-        fact:
-          type: string
-          description: The cat fact text.
-          example: In multi-cat households, cats of the opposite sex usually get along better.
-        length:
-          type: integer
-          description: Character length of the fact.
-          example: 75
     PaginationLink:
       type: object
       description: A single pagination link entry.
@@ -102,6 +87,21 @@ components:
         active:
           type: boolean
           description: Whether this link represents the current page.
+    Fact:
+      type: object
+      description: A single cat fact with its character length.
+      required:
+      - fact
+      - length
+      properties:
+        fact:
+          type: string
+          description: The cat fact text.
+          example: In multi-cat households, cats of the opposite sex usually get along better.
+        length:
+          type: integer
+          description: Character length of the fact.
+          example: 75
     FactList:
       type: object
       description: Paginated list of cat facts (Laravel-style pagination).
