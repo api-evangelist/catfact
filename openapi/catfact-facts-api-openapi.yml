@@ -72,36 +72,6 @@ paths:
       - Facts
 components:
   schemas:
-    PaginationLink:
-      type: object
-      description: A single pagination link entry.
-      properties:
-        url:
-          type: string
-          format: uri
-          nullable: true
-          description: URL for this page link.
-        label:
-          type: string
-          description: Display label for this link (e.g. page number or Previous/Next).
-        active:
-          type: boolean
-          description: Whether this link represents the current page.
-    Fact:
-      type: object
-      description: A single cat fact with its character length.
-      required:
-      - fact
-      - length
-      properties:
-        fact:
-          type: string
-          description: The cat fact text.
-          example: In multi-cat households, cats of the opposite sex usually get along better.
-        length:
-          type: integer
-          description: Character length of the fact.
-          example: 75
     FactList:
       type: object
       description: Paginated list of cat facts (Laravel-style pagination).
@@ -162,3 +132,33 @@ components:
           type: integer
           description: Total number of facts.
           example: 1656
+    Fact:
+      type: object
+      description: A single cat fact with its character length.
+      required:
+      - fact
+      - length
+      properties:
+        fact:
+          type: string
+          description: The cat fact text.
+          example: In multi-cat households, cats of the opposite sex usually get along better.
+        length:
+          type: integer
+          description: Character length of the fact.
+          example: 75
+    PaginationLink:
+      type: object
+      description: A single pagination link entry.
+      properties:
+        url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL for this page link.
+        label:
+          type: string
+          description: Display label for this link (e.g. page number or Previous/Next).
+        active:
+          type: boolean
+          description: Whether this link represents the current page.
