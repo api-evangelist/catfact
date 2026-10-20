@@ -1,0 +1,69 @@
+{
+  "endpoint": "https://catfact.ninja/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "Cat Facts",
+    "version": "1.0.0"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "random-cat-fact",
+        "title": "Random Cat Fact",
+        "description": "Get a single random cat fact, optionally limited to a maximum character length.",
+        "inputSchema": {
+          "properties": {
+            "max_length": {
+              "description": "Maximum character length of the returned fact.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": true
+        }
+      },
+      {
+        "name": "list-cat-facts",
+        "title": "List Cat Facts",
+        "description": "List cat facts as a JSON array, optionally filtered by maximum length. Default limit 10, maximum 1000.",
+        "inputSchema": {
+          "properties": {
+            "max_length": {
+              "description": "Maximum character length of returned facts.",
+              "type": "integer"
+            },
+            "limit": {
+              "description": "Number of facts to return (default 10, maximum 1000).",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": true
+        }
+      },
+      {
+        "name": "list-breeds",
+        "title": "List Breeds",
+        "description": "List cat breeds as a JSON array. Default limit 25, maximum 1000.",
+        "inputSchema": {
+          "properties": {
+            "limit": {
+              "description": "Number of breeds to return (default 25, maximum 1000).",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "annotations": {
+          "readOnlyHint": true
+        }
+      }
+    ]
+  }
+}
